@@ -1,7 +1,9 @@
 package com.nicksdesk.fizzbuzz;
 
 import java.util.HashMap;
-
+/*
+ * An efficient way of doing fizzbuzz with unlimited scalability
+ */
 public class Main {
 
 	private static int i;

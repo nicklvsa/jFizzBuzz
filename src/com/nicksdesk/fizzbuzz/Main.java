@@ -6,6 +6,7 @@ import java.util.HashMap;
  */
 public class Main {
 
+	//define used vars here as the forEach is not able to access them as they are not final
 	private static int i;
 	private static StringBuilder content;
 	
@@ -21,18 +22,24 @@ public class Main {
 		fizzBuzz(items, 100);
 	}
 	
+	//set this as a separate function for organization
 	public static void fizzBuzz(HashMap<Integer, String> hits, int length) {
 		
+		//loop through the specified amount of numbers
 		for(i = 1; i <= length; i++) {
 			
+			//be sure to assign content to a new instance of StringBuilder so that the previous content is erased
 			content = new StringBuilder();
 			
+			//loop through k,v map and run modulus operator on all values
 			hits.forEach((key, value) -> {
 				if(i % key == 0) content.append(value);
 			});
 			
+			//if the current value of content is empty
 			if(content.toString().isEmpty()) content = new StringBuilder(Integer.toString(i));
 			
+			//print content to the log
 			System.out.println(content);
 			
 		}

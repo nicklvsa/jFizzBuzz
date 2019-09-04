@@ -10,6 +10,8 @@ public class Main {
 	public static void main(String[] args) {
 		
 		HashMap<Integer, String> items = new HashMap<Integer, String>();
+		
+		//add the numbers and string to replace with in the fizzbuzz algorithm
 		items.put(2, "fizz");
 		items.put(3, "buzz");
 		items.put(6, "bizz");
